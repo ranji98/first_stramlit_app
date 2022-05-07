@@ -18,11 +18,11 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 #display the table on the page
 streamlit.dataframe(fruits_to_show)
 
-import requests
-fruitvice_response=requests.get("https://fruityvice.com/api/fruit/watermelon")
+#import requests
+#fruitvice_response=requests.get("https://fruityvice.com/api/fruit/watermelon")
 #streamlit.text(fruitvice_response.json())--------------------to delete the line
-fruitvice_normalized=pandas.json_normalize(fruitvice_response.json())
-streamlit.dataframe(fruitvice_normalized)
+#fruitvice_normalized=pandas.json_normalize(fruitvice_response.json())
+#streamlit.dataframe(fruitvice_normalized)
 
 
 streamlit.header('fruityvice fruit Advice!')
