@@ -30,14 +30,16 @@ fruit_choice = streamlit.text_input('what fruit would you like information about
 streamlit.write('The user entered', fruit_choice)
 import requests
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
-fruits_to_show = fruityvice_response.loc[fruit_choice]
-
-streamlit.dataframe(fruityvice_response)
-
+fruitvice_normalized=pandas.json_normalize.json(fruityvice_response))
+streamlit.dataframe(fruitvice_normalized)
 
 
 
 
+#fruitvice_response=requests.get("https://fruityvice.com/api/fruit/watermelon")
+#streamlit.text(fruitvice_response.json())--------------------to delete the line
+#fruitvice_normalized=pandas.json_normalize(fruitvice_response.json())
+#streamlit.dataframe(fruitvice_normalized)
 
 
 
