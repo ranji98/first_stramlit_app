@@ -24,11 +24,15 @@ streamlit.dataframe(fruits_to_show)
 #streamlit.text(fruitvice_response)
 
 streamlit.header('fruitvice fruit Advice!')
+fruit_choice=streamlit.text_input('what fruit would you like information about?','Kiwi')
+streamlit.write('the user entered',fruit_choice)
 import requests
-fruitvice_response=requests.get("https://fruityvice.com/api/fruit/watermelon")
+fruitvice_response=requests.get("https://fruityvice.com/api/fruit/" +fruit_choice)
+
+#fruitvice_response=requests.get("https://fruityvice.com/api/fruit/watermelon")
 #streamlit.text(fruitvice_response.json())--------------------to delete the line
-fruitvice_normalized=pandas.json_normalize(fruitvice_response.json())
-streamlit.dataframe(fruitvice_normalized)
+#fruitvice_normalized=pandas.json_normalize(fruitvice_response.json())
+#streamlit.dataframe(fruitvice_normalized)
 
 
 
