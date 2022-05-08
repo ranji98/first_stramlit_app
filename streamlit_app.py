@@ -65,7 +65,7 @@ if streamlit.button('Add a Fruit to the List'):
    
    
    # Allow end user to add to the fruit list.
-   
+ my_cur.execute("insert into fruit_load_list values ('from streamlit')")
 
       
    
