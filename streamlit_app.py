@@ -40,6 +40,6 @@ streamlit.dataframe(fruitvice_normalized)
 #streamlit.text(fruitvice_response.json())--------------------to delete the line
 #fruitvice_normalized=pandas.json_normalize(fruitvice_response.json())
 #streamlit.dataframe(fruitvice_normalized)
-
+import snowflake.connector
 
 
