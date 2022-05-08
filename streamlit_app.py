@@ -37,3 +37,5 @@ streamlit.dataframe(fruitvice_normalized)
 import snowflake.connector
 
 
+
+
