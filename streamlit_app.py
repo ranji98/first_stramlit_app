@@ -50,7 +50,7 @@ my_cur.execute("select * from FRUIT_LOAD_LIST")
 my_data_row =my_cur.fetchall()
 #streamlit.text("fruit load list contians")
 #streamlit.text(my_data_row)
-streamlit.header("load contains:")
+streamlit.header("the fruit load list  contains:")
 streamlit.dataframe(my_data_row)
 '''
 def insert_row_snowflake(new_fruit):
