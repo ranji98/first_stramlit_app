@@ -23,6 +23,7 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 streamlit.dataframe(fruits_to_show)
 
 
+streamlit.header("the fruit load list contains:")
 def get_fruit_load_list():
     with my_cnx.cursor() as my_cur:
          my_cnx.execute("select * from FRUIT_LOAD_LIST")
