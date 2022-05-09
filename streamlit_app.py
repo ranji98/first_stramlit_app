@@ -64,15 +64,16 @@ try:
         streamlit.dataframe(back_from_function)
 except URLError as e:
     streamlit.error() '''
-    
-def get():
-   with my_cnx.cursor as my_cur:
-          my_cur.execute("select * from fruit_load_list")
-          return my_cur.fetchall()
+def get_fruit_load_list():
+    with my_cnx.cursor() as my_cur:
+         my_cnx.execute("select * from FRUIT_LOAD_LIST")
+         return my_cur.fetchall()
 if streamlit.button('get fruit load list'):
-      my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
-      my_data_rows=get()
-      streamlit.dataframe(my_data_rows)
+    my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+    my_data_rows=get_fruit_load_list()
+    streamlit.dataframe(my_data_rows)
+    
+
     
  
         
